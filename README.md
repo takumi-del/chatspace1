@@ -22,3 +22,63 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+# README編集　DB設計
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|username|string|null: fase|
+|email|string|null: fase|
+|password|string|null: false|
+### Association
+- has_many :groups
+- has_many :posts
+
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|groupname|text|null: fase|
+|addusers|text|
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- has_many : posts
+
+## groups_usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :group
+- belongs_to :user
+
+## postsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :groups
+- has_many :users
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
