@@ -28,7 +28,7 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|username|string|null: fase|
+|name|string|null: fase|
 |email|string|null: fase|
 |password|string|null: false|
 ### Association
@@ -39,9 +39,7 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|text|null: fase|
-|addusers|text|
-|user_id|integer|null: false, foreign_key: true|
+|name|sting|null: fase|
 ### Association
 - has_many :users,througt::groups_users
 - has_many : posts
@@ -50,7 +48,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true| 
 ### Association
 - belongs_to :group
 - belongs_to :user
@@ -58,12 +56,13 @@ Things you may want to cover:
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false, foreign_key: true|
+|text|text||
+|image|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :groups
-- has_many :users
+- belongs_to :user
 
 
 
