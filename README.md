@@ -32,8 +32,9 @@ Things you may want to cover:
 |email|string|null: fase|
 |password|string|null: false|
 ### Association
-- has_many :groups
+- has_many :groups,througt::groups_users
 - has_many :posts
+- has_many :groups_users
 
 ## groupsテーブル
 |Column|Type|Options|
@@ -42,9 +43,9 @@ Things you may want to cover:
 |addusers|text|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :user
+- has_many :users,througt::groups_users
 - has_many : posts
-
+- has_many :groups_users
 ## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
