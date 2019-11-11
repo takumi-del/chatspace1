@@ -1,0 +1,35 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__current-group{group_id:"#"} group name
+      %ul.main-header__left-box__member-list
+        Member:
+        %li.main-header__left-box__member-list__member
+          takumi
+    =link_to "#" do
+      .main-header__edit-btn Edit      
+      
+    
+  
+  .messages
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker suehiro takumi
+        %p.message__upper-info____data "#"
+      %p.message__text いただきます！
+  .form
+    %form.new__message#new_message{enctype: "multipart/form-data",action:"#",method:"post",}
+      %input{name:"utf8",type: "hidden",value:"✔️"}
+      %input{type:"hidden",name:"authenticity_token",value:""}
+        .input-box
+          %input#message_content{type: "text",placeholder: "type a message",class:"input-box__text",name:"message[content]",}
+            %label{class: "input-box__image",for:"message_image"}
+              = icon('fa', 'image')
+              %input.input-box__image__file{type:"file",name:"message[image]",id:"message_image"}
+        %input{type:"submit",name:"commit",value:"Send",class:"submit-btn",}
+        
+ 
+
+
+
+
