@@ -14,7 +14,9 @@ class GroupsController < ApplicationController
     else
       render :new
     end
-    def update
+  end
+    
+  def update
       if @group.update(group_params)
         redirect_to group_messages_path(@group), notice: 'グループを編集しました'
       else
@@ -30,5 +32,4 @@ class GroupsController < ApplicationController
   def set_group
     @group = Group.find(params[:id])
   end
-end
 end
