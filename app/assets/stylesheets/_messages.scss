@@ -166,37 +166,37 @@
         background-color: #ddd;
 
       }
-        .new__message{
+        .new_message{
         display: flex;
         
       }
-        .input-box{
-          position: relative;
-          width: 100%;
-        
-          &__text{
-            height: 50px;
+          .input-box{
+            position: relative;
             width: 100%;
-            padding: 0 40px 0 10px;
-            color: #434a54;
-            border-style: none;
-          }
-          &__image{
-            font-size: 1.3rem;
-            position: absolute;
-            top: 10px;
-            right:10px;
-            cursor: pointer;
-          }
-            .fa {
-              display: inline-block;
-              font-size: inherit;
-              text-rendering: auto;
-              
+          
+            &__text{
+              height: 50px;
+              width: 100%;
+              padding: 0 40px 0 10px;
+              color: #434a54;
+              border-style: none;
             }
-            &__image__file{
-              display: none;
+            &__image{
+              font-size: 1.3rem;
+              position: absolute;
+              top: 10px;
+              right:10px;
+              cursor: pointer;
             }
+              .fa {
+                display: inline-block;
+                font-size: inherit;
+                text-rendering: auto;
+                
+              }
+              &__image__file{
+                display: none;
+              }
         }
 
         .submit-btn{
