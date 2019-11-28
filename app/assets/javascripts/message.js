@@ -22,6 +22,29 @@ $(function () {
         </div>`
     return html;
   }
+  $('.new_message').on('submit', function(e){
+    e.preventDefault();
+    let formData = new FormData(this); 
+    let url = $(this).attr('action')
+  
+    $.ajax({ 
+      url: url, 
+      type: "POST", 
+      data: formData, 
+      dataType: 'json',
+      processData: false, 
+      contentType: false 
+    })
+      .done(function(data){
+        buildHTML(data);
+        $('messages').animate({scrollTop: $('.messages')[0].scrollHeight},'fast');
+        $('form')[0].reset();
+      })
+      .fail(function(){
+        alert('メッセージの送信に失敗しました');
+      });
+      return false;
+    })
   
   var reloadMessages = function () {
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
