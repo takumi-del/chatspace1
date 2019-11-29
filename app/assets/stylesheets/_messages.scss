@@ -130,7 +130,7 @@
           position: absolute;
           right: 40px;
         }
-      .message{
+      .messages{
         height:calc(100vh - 190px);
         padding: 46px 40px;
         background-color: #fafafa;
@@ -138,17 +138,19 @@
       }
         .message{
           padding-bottom: 40px;
+          overflow:scroll;
         }
-        .message__upper-info{
+          .message__upper-info{
           display: flex;
           margin-bottom: 10px;
         
-          .message__upper-info__talker{
+        
+            .message__upper-info__talker{
             color: #434a54;
             font-size: 16px;
             font-weight: bold;
           }
-          .message__upper-info____data{
+            .message__upper-info____data{
             color: #999999;
             font-size: 12px;
             margin-left: 10px;
