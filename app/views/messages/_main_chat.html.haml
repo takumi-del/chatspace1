@@ -4,9 +4,11 @@
       %h2.main-header__left-box__current-group
         = @group.name
       %ul.main-header__left-box__member-list
-        Member:
+        Member  : 
         %li.main-header__left-box__member-list__member
-          takumi
+          =  current_user.name
+          -# - @users.each do |user|
+          -#   %span=user.name
     =link_to edit_group_path(@group.id) do
       .main-header__edit-btn Edit      
       
