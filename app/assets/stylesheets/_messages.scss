@@ -52,27 +52,27 @@
         text-decoration: none;
           color: white
       }
-      
+            
       
             .group{
         margin-bottom:40px ;
             
       
-              &--name{
+              .group__name{
         font-size: 15px;
-        font-weight: bold;
-        color:white;
+        // font-weight: bold;
+        // color:white;
         margin-bottom: 5px;
       }
       
 
-              &__latest--message{
+              .group__message{
         font-size: 11px;
-        font-weight: bold;
-        color: white;
+        // font-weight: bold;
+        // color: white;
       }
     }
-
+            
     }
     
     .chat-main{
