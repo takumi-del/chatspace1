@@ -6,9 +6,10 @@
       %ul.main-header__left-box__member-list
         Member  : 
         %li.main-header__left-box__member-list__member
-          =  current_user.name
-          -# - @users.each do |user|
-          -#   %span=user.name
+          -# - group.users.each do |user|
+          -# -# -# =  current_user.name
+          - @users.each do |user|
+            %span=user.name
     =link_to edit_group_path(@group.id) do
       .main-header__edit-btn Edit      
       

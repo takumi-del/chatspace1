@@ -1,15 +1,13 @@
 $(function () {
   function buildHTML(message) {
-    // console.log(message)
-    image = (message.image) ? `<img class= "lower-message__image" src=${message.image} >` : ""; 
-
+    var image = (message.image) ? `<img class= "lower-message__image" src=${message.image} >` : ""; 
     var html = `<div class="message" data-message-id="${message.id}"> 
                   <div class="message__upper-info">
                     <p class="message__upper-info__talker">
                       ${message.user_name}
                     </p>
                     <p class="message__upper-info____data">
-                      ${message.date}
+                      ${message.created_at}
                     </p>
                   </div>
                   <div class="lower-meesage">
