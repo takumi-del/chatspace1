@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    
+    @group
   end
 
   def update
@@ -19,7 +19,10 @@ class UsersController < ApplicationController
       render :edit
     end
   end
-
+  
+  def destdroy
+  
+  end
   
   private
 
